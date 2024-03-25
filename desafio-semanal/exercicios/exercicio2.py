@@ -5,3 +5,20 @@
 # - Mantenha uma variável para armazenar o preço total.
 # - Adicione o preço de cada fruta ao preço total.
 # - Após inserir todos os preços, imprima o preço total.
+
+
+total = 0
+
+while True:
+    try:
+        preco = float(input("Insira o preço da fruta (ou digite 0 para finalizar): "))
+        if preco == 0:
+            break
+        elif preco < 0:
+            print("O preço da fruta não pode ser negativo.")
+        else:
+            total += preco
+    except ValueError:
+        print("Insira um preço válido.")
+
+print("O preço total das frutas é:", total)
